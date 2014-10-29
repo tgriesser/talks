@@ -1,0 +1,13 @@
+// Guarding against unset values
+function setDeepProperty(x) {
+  if (typeof x.property !== 'undefined') {
+    x.property = {};
+  }
+  if (typeof x.property.item !== 'undefined') {
+    x.property.item = {};
+  }
+  x.property.item.value = 'set';
+}
+
+// vs.
+x.setIn(['property', 'item'], 'set')

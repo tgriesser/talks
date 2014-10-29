@@ -1,0 +1,15 @@
+var Immutable = require('immutable');
+
+var map1 = Immutable.Map({a:1, b:2, c:3});
+var map2 = map1.set('b', 2);
+assert(map1 === map2);
+
+var map1 = Immutable.Map({a:1, b:2, c:3});
+
+// Efficient to keep history, undo / redo, (think failed ajax requests)
+// web audio apps
+var clone = map1;
+
+var map2 = map1.setIn(['d', 'e', 'f'], 'g');
+
+// Map { a: 1, b: 2, c: 3, d: Map { e: Map { f: "g" } } }

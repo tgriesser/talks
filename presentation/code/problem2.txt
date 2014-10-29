@@ -1,0 +1,13 @@
+var _ = require('lodash');
+
+function someFunction(arg1, arg2) {
+  var x = _.cloneDeep(arg1);
+
+  if (!x.something.deep) {
+    
+    // no longer mutated, but very inefficient
+    x.something.deep = 'some value';
+  }
+
+  return x;
+}

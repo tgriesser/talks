@@ -1,0 +1,17 @@
+var React = require('react');
+
+var SomeComponent1 = React.createClass({
+  
+  // Efficient "should component update"
+  shouldComponentUpdate: function(nextProps, nextState) {
+    return !Immutable.is(nextProps, this.props) || 
+      !Immutable.is(nextState, this.state);
+  },
+
+  render: function() {
+    // ... JSX
+  }
+
+});
+
+module.exports = SomeComponent1

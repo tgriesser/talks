@@ -1,0 +1,15 @@
+var SomeComponent1 = require('./some/component1');
+var SomeComponent2 = require('./some/component2');
+
+var Parent = React.createClass({
+    
+  render: function() {
+    <div className="someClass">
+      <SomeComponent1 data={this.props.get('component1')} />
+      <SomeComponent2 data={this.props.get('component2')} />
+    </div>
+  }
+
+});
+
+module.exports = Parent;

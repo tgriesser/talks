@@ -1,0 +1,11 @@
+function someFunction(arg1, arg2) {
+  var x = arg1;
+
+  if (!x.something.deep) {
+    
+    // we've just mutated arg1
+    x.something.deep = 'some value';
+  }
+
+  return x;
+}

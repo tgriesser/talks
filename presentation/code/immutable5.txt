@@ -1,0 +1,10 @@
+// Other Supported Structures:
+Immutable.List()  // (array like)
+
+Immutable.Stack()
+
+Immutable.OrderedMap()
+
+Immutable.Set()
+
+Immutable.Map()

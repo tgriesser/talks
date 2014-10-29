@@ -1,0 +1,14 @@
+var Immutable = require('immutable');
+
+Immutable.fromJS({
+  person: {
+    name: {
+      first: "Tim",
+      last:  "G"
+    }
+  },
+  someArray: [
+    {nested: 'object', value: [1, 2, 3]},
+    {nested: 'object', value: [1, 2, 3, 4]}
+  ]
+});

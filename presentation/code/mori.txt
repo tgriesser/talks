@@ -1,0 +1,13 @@
+var users = mori.js_to_clj([{name: "James", age: 26}, {name: "John", age: 43}])
+// users.toString()  [{"name" "James", "age" 26} {"name" "John", "age" 43}]
+
+mori.assoc_in(users, [1, 'age'], 44);
+// [{"name" "James", "age" 26} {"name" "John", "age" 44}]
+
+mori.get_in(users, [1, 'age']);
+// 43
+
+mori.update_in(users, [2], function(user) {
+  return mori.hash_map('name', 'jack', 'age', 19);
+})
+// [{"name" "James", "age" 26} {"name" "John", "age" 43} {"age" 19, "name" "jack"}]

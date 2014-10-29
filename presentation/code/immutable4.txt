@@ -1,0 +1,10 @@
+// Guarding against unset values
+function getDeepItem(x, notSetValue) {
+  if (typeof x.property !== 'undefined' &&
+    return x.property.item;
+  }
+  return notSetValue;
+}
+
+// vs.
+x.getIn(['property', 'item'], 'set')

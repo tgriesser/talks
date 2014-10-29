@@ -1,0 +1,30 @@
+{
+  "name": "phillyjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack -d --hide-modules --watch --colors"
+  },
+  "author": "Tim Griesser",
+  "license": "MIT",
+  "devDependencies": {
+    "file-loader": "^0.8.1",
+    "hapi": "^7.1.1",
+    "jsx-loader": "^0.12.0",
+    "raw-loader": "^0.5.1",
+    "webpack": "^1.4.9"
+  },
+  "dependencies": {
+    "handlebars": "^2.0.0",
+    "hapi": "^7.1.1",
+    "highlight.js": "^8.3.0",
+    "hljs": "^6.2.3",
+    "htmltidy": "0.0.6",
+    "immutable": "^3.0.0",
+    "node-jsx": "^0.12.0",
+    "react": "^0.12.0"
+  }
+}
